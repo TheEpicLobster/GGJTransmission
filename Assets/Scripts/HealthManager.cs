@@ -19,7 +19,7 @@ public class HealthManager : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
-        if (health <= 0 || gameObject.GetComponent<GameStateManager>().gameState != GameStateManager.State.InProgress)
+        if (health <= 0 || GameStateManager.gameState != GameStateManager.State.InProgress)
         {
             // Already dead
             return;

@@ -12,7 +12,7 @@ public class GameStateManager : MonoBehaviour {
         Restarting
     }
 
-    public State gameState { private set; get;}
+    public static State gameState { private set; get;}
 
     System.Action<State> stateChange;
 
