@@ -5,16 +5,17 @@ using UnityEngine;
 public class FollowPath : MonoBehaviour {
     public PathCreator path;
     [Range(0.01f, 20.0f)]
-    public float speed = 5.0f;
+    float speed = 5.0f;
     int index = 0;
     Vector3 target;
-    Vector3 heading;
-    float distance;
+    VirusStats stats;
+
 
     // Use this for initialization
     void Start () {
-        heading = transform.forward;
         target = path.points[0];
+        stats = GetComponent<VirusStats>();
+        speed = stats.speed;
 	}
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class FollowPath : MonoBehaviour {
             if (!NextTarget())
             {
                 // TODO Lose health
+                stats.DamagePlayer();
                 Destroy(gameObject);
             }
         }
@@ -47,9 +49,6 @@ public class FollowPath : MonoBehaviour {
         {
             Vector2 target2D = path.points[index];
             Vector3 target3D = new Vector3(target2D.x, target2D.y, transform.position.z);
-
-            distance = (target3D - target).magnitude;
-            heading = transform.forward;
             target = target3D;
             return true;
         }

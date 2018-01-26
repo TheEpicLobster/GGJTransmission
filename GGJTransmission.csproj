@@ -295,10 +295,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\FollowPath.cs" />
+    <Compile Include="Assets\Scripts\HealthManager.cs" />
+    <Compile Include="Assets\Scripts\HealthUIUpdater.cs" />
     <Compile Include="Assets\Scripts\PathCreator.cs" />
     <Compile Include="Assets\Scripts\PathManager.cs" />
     <Compile Include="Assets\Scripts\VirusManager.cs" />
     <Compile Include="Assets\Scripts\VirusSpawner.cs" />
+    <Compile Include="Assets\Scripts\VirusStats.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
