@@ -10,6 +10,7 @@ public class PathCreator : MonoBehaviour {
     PathCreator()
     {
         points = new List<Vector2>();
+        PathManager.AddPath(this);
     }
 
     public void AddSegment(Vector2 newPoint)

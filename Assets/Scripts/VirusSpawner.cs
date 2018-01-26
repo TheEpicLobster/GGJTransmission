@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class VirusSpawner : MonoBehaviour {
     public GameObject virusPrefab;
-    public PathCreator creator;
     [Range(0, 10)]
     public float spawnInterval;
 
@@ -36,6 +35,7 @@ public class VirusSpawner : MonoBehaviour {
     {
         GameObject newVirus = Instantiate(virusPrefab);
 
+        PathCreator creator = PathManager.GetRandomPath();
         newVirus.transform.position = creator.points[0];
         FollowPath followPath = newVirus.GetComponent<FollowPath>();
         followPath.path = creator;

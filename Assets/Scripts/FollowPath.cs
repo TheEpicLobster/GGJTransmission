@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class FollowPath : MonoBehaviour {
     public PathCreator path;
-    [Range(1, 100)]
-    public float speed;
+    [Range(0.01f, 20.0f)]
+    public float speed = 5.0f;
     int index = 0;
     Vector3 target;
+    Vector3 heading;
+    float distance;
 
     // Use this for initialization
     void Start () {
+        heading = transform.forward;
         target = path.points[0];
 	}
 
@@ -24,13 +27,13 @@ public class FollowPath : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
+        PointToDestination();
         Move();
 	}
 
     bool TargetReached()
     {
-        Debug.Log(target);
-        if (Vector3.Distance(transform.position, target) < .5f)
+        if (Vector3.Distance(transform.position, target) < .1f)
         {
             return true;
         }
@@ -43,10 +46,24 @@ public class FollowPath : MonoBehaviour {
         if (index < path.points.Count)
         {
             Vector2 target2D = path.points[index];
-            target = new Vector3(target2D.x, target2D.y, transform.position.z);
+            Vector3 target3D = new Vector3(target2D.x, target2D.y, transform.position.z);
+
+            distance = (target3D - target).magnitude;
+            heading = transform.forward;
+            target = target3D;
             return true;
         }
         return false;
+    }
+
+    void PointToDestination()
+    {
+
+        Vector3 vectorToTarget = target - transform.position;
+        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+        Quaternion q = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, q, 1);
+
     }
 
     void Move()
