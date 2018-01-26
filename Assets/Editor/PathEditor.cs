@@ -32,7 +32,7 @@ public class PathEditor : Editor {
         for (int i = 0; i < creator.points.Count; i++)
         {
             Handles.color = Color.red;
-            Vector2 newPos = Handles.FreeMoveHandle(creator.points[i], Quaternion.identity, .1f, Vector2.zero, Handles.CylinderHandleCap);
+            Vector2 newPos = Handles.FreeMoveHandle(creator.points[i], Quaternion.identity, 1.0f, Vector2.zero, Handles.CylinderHandleCap);
             if ( creator.points[i] != newPos )
             {
                 creator.MoveSegment(i, newPos);
