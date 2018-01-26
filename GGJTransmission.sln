@@ -1,12 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGJTransmission", "GGJTransmission.csproj", "{364F8DE5-0BA6-2B93-B6DB-2FE10E2E603D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGJTransmission.Editor", "GGJTransmission.Editor.csproj", "{47869E76-563F-C7D1-BFB7-D814902CFF73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{364F8DE5-0BA6-2B93-B6DB-2FE10E2E603D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{364F8DE5-0BA6-2B93-B6DB-2FE10E2E603D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{364F8DE5-0BA6-2B93-B6DB-2FE10E2E603D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{364F8DE5-0BA6-2B93-B6DB-2FE10E2E603D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47869E76-563F-C7D1-BFB7-D814902CFF73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47869E76-563F-C7D1-BFB7-D814902CFF73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47869E76-563F-C7D1-BFB7-D814902CFF73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47869E76-563F-C7D1-BFB7-D814902CFF73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
