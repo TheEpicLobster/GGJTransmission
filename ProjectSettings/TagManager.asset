@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Virus
+  - Tracks
+  - FieldOfPlay
+  - Tower
   layers:
   - Default
   - TransparentFX

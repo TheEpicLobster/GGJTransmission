@@ -291,13 +291,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\ChemistryManager.cs" />
+=======
+    <Compile Include="Assets\Scripts\BulletController.cs" />
+    <Compile Include="Assets\Scripts\EnemyTracker.cs" />
+>>>>>>> 06f12bd8bbfe503acbb30d4b05ac64f52b795e27
     <Compile Include="Assets\Scripts\FollowPath.cs" />
     <Compile Include="Assets\Scripts\GameStateManager.cs" />
     <Compile Include="Assets\Scripts\HealthManager.cs" />
     <Compile Include="Assets\Scripts\HealthUIUpdater.cs" />
     <Compile Include="Assets\Scripts\PathCreator.cs" />
     <Compile Include="Assets\Scripts\PathManager.cs" />
+    <Compile Include="Assets\Scripts\ShootEnemies.cs" />
+    <Compile Include="Assets\Scripts\TowerStats.cs" />
     <Compile Include="Assets\Scripts\VirusHealth.cs" />
     <Compile Include="Assets\Scripts\VirusManager.cs" />
     <Compile Include="Assets\Scripts\VirusSpawner.cs" />

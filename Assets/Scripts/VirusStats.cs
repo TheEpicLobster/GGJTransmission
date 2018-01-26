@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class VirusStats : MonoBehaviour {
+    [HideInInspector]
     public HealthManager player;
 
     public int health;
@@ -18,11 +19,8 @@ public class VirusStats : MonoBehaviour {
         curHealth = health;
     }
 
-    int frameCount = 0;
-
     private void Update()
     {
-        Debug.Log(Time.deltaTime);
         TakeDamage(1);
     }
 
@@ -33,7 +31,6 @@ public class VirusStats : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
-        Debug.Log(curHealth);
         curHealth -= damage;
         curHealth = (curHealth <= 0) ? 0 : curHealth;
         GetComponentInChildren<UnityEngine.UI.Slider>().value = curHealth;
