@@ -300,6 +300,7 @@
     <Compile Include="Assets\Scripts\HealthUIUpdater.cs" />
     <Compile Include="Assets\Scripts\PathCreator.cs" />
     <Compile Include="Assets\Scripts\PathManager.cs" />
+    <Compile Include="Assets\Scripts\VirusHealth.cs" />
     <Compile Include="Assets\Scripts\VirusManager.cs" />
     <Compile Include="Assets\Scripts\VirusSpawner.cs" />
     <Compile Include="Assets\Scripts\VirusStats.cs" />

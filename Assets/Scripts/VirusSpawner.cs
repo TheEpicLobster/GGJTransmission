@@ -14,6 +14,9 @@ public class VirusSpawner : MonoBehaviour {
 
     GameObject player;
 
+
+    public GameObject healthBarPrefab;
+
     bool gameOver = false;
 
     // Use this for initialization
@@ -60,6 +63,12 @@ public class VirusSpawner : MonoBehaviour {
 
         VirusStats virusStats = newVirus.GetComponent<VirusStats>();
         virusStats.player = player.GetComponent<HealthManager>();
+
+        GameObject healthBar = Instantiate(healthBarPrefab, newVirus.transform);
+        UnityEngine.UI.Slider healthSlider = healthBar.GetComponentInChildren<UnityEngine.UI.Slider>();
+        healthSlider.minValue = 0;
+        healthSlider.maxValue = virusStats.health;
+        healthSlider.value = healthSlider.maxValue;
 
         viruses.Add(newVirus);
     }

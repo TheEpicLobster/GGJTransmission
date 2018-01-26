@@ -9,50 +9,50 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1397345497212238}
+  m_RootGameObject: {fileID: 1370115241666668}
   m_IsPrefabParent: 1
---- !u!1 &1397345497212238
+--- !u!1 &1370115241666668
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4814880043801900}
-  - component: {fileID: 212757692250916260}
-  - component: {fileID: 95973692162182678}
-  - component: {fileID: 114552281686201440}
-  - component: {fileID: 114127436778059344}
+  - component: {fileID: 4784420130528770}
+  - component: {fileID: 212565030882180830}
+  - component: {fileID: 95449818512320874}
+  - component: {fileID: 114982303831309390}
+  - component: {fileID: 114300170135355200}
   m_Layer: 0
-  m_Name: Bacteria
+  m_Name: HelicobacterPylori
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4814880043801900
+--- !u!4 &4784420130528770
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1397345497212238}
+  m_GameObject: {fileID: 1370115241666668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95973692162182678
+--- !u!95 &95449818512320874
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1397345497212238}
+  m_GameObject: {fileID: 1370115241666668}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0a26e3e98e630ea439a75273f7323a52, type: 2}
+  m_Controller: {fileID: 9100000, guid: bf18a2ff4339afe4a80a05a7b0da24d4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -60,12 +60,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114127436778059344
+--- !u!114 &114300170135355200
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1397345497212238}
+  m_GameObject: {fileID: 1370115241666668}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f452294f374594b4da6cb845c5526418, type: 3}
@@ -75,24 +75,24 @@ MonoBehaviour:
   health: 500
   speed: 10
   damage: 1
---- !u!114 &114552281686201440
+--- !u!114 &114982303831309390
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1397345497212238}
+  m_GameObject: {fileID: 1370115241666668}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96a7aef15ce333346a506180d19b4762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
---- !u!212 &212757692250916260
+--- !u!212 &212565030882180830
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1397345497212238}
+  m_GameObject: {fileID: 1370115241666668}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -121,12 +121,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 67a59f5f031be7e4a94eabd34580d283, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3d1d769ab2daa749b350c286e7a0598, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 5, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
