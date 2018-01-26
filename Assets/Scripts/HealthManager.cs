@@ -19,9 +19,15 @@ public class HealthManager : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
+        if (health <= 0 || gameObject.GetComponent<GameStateManager>().gameState != GameStateManager.State.InProgress)
+        {
+            // Already dead
+            return;
+        }
+
         health -= damage;
 
-        health = health < 0 ? 0 : health;
+        health = (health < 0) ? 0 : health;
 
         // Alert change in player health
         if (healthUpdated != null)
