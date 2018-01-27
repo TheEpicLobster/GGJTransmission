@@ -62,7 +62,7 @@ public class VirusSpawner : MonoBehaviour {
         followPath.path = creator;
 
         VirusStats virusStats = newVirus.GetComponent<VirusStats>();
-        virusStats.player = player.GetComponent<HealthManager>();
+        virusStats.player = player;
 
         GameObject healthBar = Instantiate(healthBarPrefab, newVirus.transform);
         UnityEngine.UI.Slider healthSlider = healthBar.GetComponentInChildren<UnityEngine.UI.Slider>();

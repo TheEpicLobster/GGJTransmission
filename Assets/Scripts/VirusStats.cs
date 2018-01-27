@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class VirusStats : MonoBehaviour {
     [HideInInspector]
-    public HealthManager player;
+    public GameObject player;
 
     public int health;
     [Range(0, 20)]
     public int speed;
     [Range(0, 999)]
     public int damage;
+
+    [Range(0, 1000)]
+    public int payout = 100;
 
     private int curHealth;
 
@@ -21,7 +24,7 @@ public class VirusStats : MonoBehaviour {
 
     public void DamagePlayer()
     {
-        player.TakeDamage(damage);
+        player.GetComponent<HealthManager>().TakeDamage(damage);
     }
 
     public void TakeDamage(int damage)
@@ -31,6 +34,7 @@ public class VirusStats : MonoBehaviour {
         GetComponentInChildren<UnityEngine.UI.Slider>().value = curHealth;
         if (curHealth <= 0)
         {
+            player.GetComponent<BankAccount>().ReceivePayout(payout);
             Destroy(gameObject);
         }
     }

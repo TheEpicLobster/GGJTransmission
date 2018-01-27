@@ -1645,6 +1645,8 @@ MonoBehaviour:
   - {fileID: 1397345497212238, guid: 412116233080c494f89136eeb275ad10, type: 2}
   - {fileID: 1170495806595158, guid: c4eebfc809b1e0c44928e976198a4050, type: 2}
   - {fileID: 1370115241666668, guid: c0b89aac958e4e944a593f9e11589a42, type: 2}
+  - {fileID: 1887526572099678, guid: 4e4a96ac4ae697948a1d0081a97fc5c0, type: 2}
+  - {fileID: 1170495806595158, guid: aff424ef68bb05b49bef11a0a42a2b01, type: 2}
   spawnInterval: 0.1
   healthBarPrefab: {fileID: 1656735094924270, guid: 55b4e1d61e3608d4da84237a10a2da81,
     type: 2}
