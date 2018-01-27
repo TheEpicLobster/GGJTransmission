@@ -307,10 +307,12 @@
     <Compile Include="Assets\Scripts\PathCreator.cs" />
     <Compile Include="Assets\Scripts\PathManager.cs" />
     <Compile Include="Assets\Scripts\ShootEnemies.cs" />
+    <Compile Include="Assets\Scripts\StartWaveButtonEnabler.cs" />
     <Compile Include="Assets\Scripts\TowerManager.cs" />
     <Compile Include="Assets\Scripts\TowerStats.cs" />
     <Compile Include="Assets\Scripts\VirusSpawner.cs" />
     <Compile Include="Assets\Scripts\VirusStats.cs" />
+    <Compile Include="Assets\Scripts\WaveCountUpdater.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -7,6 +7,9 @@ public class VirusSpawner : MonoBehaviour {
 
     public GameObject healthBarPrefab;
 
+    public System.Action<int, Wave> newWave;
+    public System.Action<int, Wave> waveComplete;
+
     [System.Serializable]
     public class Wave
     {
@@ -30,15 +33,19 @@ public class VirusSpawner : MonoBehaviour {
     bool gameOver = false;
 
     bool waveRunning = false;
+    bool waitingOnRestart = true;
 
-    // Use this for initialization
-    void Start () {
-        NewWave();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    private void Start()
+    {
+        player = GameObject.Find("PlayerState");
+        player.GetComponent<HealthManager>().playerDeath += GameOver;
+        viruses = new List<GameObject>();
+        waveRunning = false;
+        gameOver = false;
+    }
 
+    // Update is called once per frame
+    void Update () {
 
         if (gameOver)
         {
@@ -47,15 +54,19 @@ public class VirusSpawner : MonoBehaviour {
 
         if (!waveRunning)
         {
-            if (!CheckWaveComplete())
+            if (!CheckWaveComplete() || waitingOnRestart)
             {
                 return;
             }
-            // Send new wave
-            // Alternatively call memory game
-            NewWave();
-        }
 
+            waitingOnRestart = true;
+
+            if (waveComplete != null)
+            {
+                waveComplete.Invoke(waveId + 1, wave);
+            }
+            return;
+        }
 
         countSinceLast++;
 
@@ -67,25 +78,24 @@ public class VirusSpawner : MonoBehaviour {
 
     }
 
-    void NewWave()
+    public void NewWave()
     {
         waveId++; // Starts at -1
-        Debug.Log(waveId);
         wave = waves[waveId];
         countRemaining = new List<int>();
         for(int i = 0; i < wave.typeCount.Count; i++)
         {
             countRemaining.Add(wave.typeCount[i]);
         }
-
-        viruses = new List<GameObject>();
         spawnGap = (int)(wave.spawnInterval / Time.deltaTime);
 
-        player = GameObject.Find("PlayerState");
-
-        player.GetComponent<HealthManager>().playerDeath += GameOver;
-
         waveRunning = true;
+        waitingOnRestart = false;
+
+        if ( newWave != null )
+        {
+            newWave.Invoke(waveId + 1, wave);
+        }
     }
 
     void Spawn()

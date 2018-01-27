@@ -57,5 +57,15 @@ public class ShootEnemies : MonoBehaviour {
         GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
 
         newBullet.GetComponent<BulletController>().Shoot(dir, transform.position, stats.GetStats());
+
+        if (stats.GetStats().type == TowerStats.TowerType.Multi)
+        {
+            GameObject lhsBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+
+            lhsBullet.GetComponent<BulletController>().Shoot(Vector3.RotateTowards(dir, Vector3.left, 10 * Mathf.Deg2Rad, 0.0f), transform.position, stats.GetStats());
+
+            GameObject rhsBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+            rhsBullet.GetComponent<BulletController>().Shoot(Vector3.RotateTowards(dir, Vector3.right, 10 * Mathf.Deg2Rad, 0.0f), transform.position, stats.GetStats());
+        }
     }
 }
