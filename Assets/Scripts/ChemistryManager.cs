@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
+using UnityEngine.SceneManagement;
 
 public class ChemistryManager : MonoBehaviour
 {
@@ -71,9 +72,17 @@ public class ChemistryManager : MonoBehaviour
 
         if (enabled == 0)
         {
-            countDown.text = "end";
             submit.enabled = false;
             LookAgain.enabled = false;
+            try
+            {
+                SceneManager.UnloadSceneAsync("Chemistry");
+            }
+            catch ( System.Exception e )
+            {
+                SceneManager.UnloadSceneAsync("Chem2");
+            }
+            Destroy(GameObject.Find("ChemistryObject"));
         }
 
         scoreText.text = "Score: " + score;
