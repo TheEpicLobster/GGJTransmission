@@ -182,21 +182,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - damage: 999
-    fireRate: 24
+    fireRate: 1
     range: 100
-    projectileSpeed: 100
+    projectileSpeed: 150
     price: 10000
     type: 0
   - damage: 999
-    fireRate: 1
+    fireRate: 5
     range: 200
-    projectileSpeed: 1000
+    projectileSpeed: 200
     price: 10000
     type: 0
   - damage: 999
     fireRate: 24
     range: 1000
-    projectileSpeed: 1000
+    projectileSpeed: 250
     price: 10000
     type: 0
 --- !u!212 &212043236134474604

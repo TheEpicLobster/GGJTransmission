@@ -184,13 +184,13 @@ MonoBehaviour:
   - damage: 1
     fireRate: 1
     range: 25
-    projectileSpeed: 20
+    projectileSpeed: 40
     price: 100
     type: 0
   - damage: 20
     fireRate: 5
     range: 20
-    projectileSpeed: 30
+    projectileSpeed: 60
     price: 100
     type: 0
   - damage: 30
