@@ -4,4 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 6eb631fda98e3c343b9fc13d861ef730
+  - enabled: 1
+    path: Assets/Scenes/TowerDefence.unity
+    guid: 6974b77ba9be1394ba0398e4a058225e
+  - enabled: 1
+    path: Assets/Scenes/Chemistry.unity
+    guid: dc6973b3c19f86c4f85bbff6828e51eb
+  - enabled: 1
+    path: Assets/Scenes/Chem2.unity
+    guid: a3644f4aa2780b74b93195270605a7fe

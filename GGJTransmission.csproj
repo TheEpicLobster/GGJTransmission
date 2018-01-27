@@ -300,6 +300,7 @@
     <Compile Include="Assets\Scripts\HealthManager.cs" />
     <Compile Include="Assets\Scripts\HealthUIUpdater.cs" />
     <Compile Include="Assets\Scripts\IntersectionTracking.cs" />
+    <Compile Include="Assets\Scripts\loadScenes.cs" />
     <Compile Include="Assets\Scripts\MoneyUIUpdator.cs" />
     <Compile Include="Assets\Scripts\PathCreator.cs" />
     <Compile Include="Assets\Scripts\PathManager.cs" />
