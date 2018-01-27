@@ -1191,6 +1191,7 @@ GameObject:
   - component: {fileID: 1195620927}
   - component: {fileID: 1195620929}
   - component: {fileID: 1195620930}
+  - component: {fileID: 1195620931}
   m_Layer: 0
   m_Name: PlayerState
   m_TagString: Untagged
@@ -1246,6 +1247,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14cdada206fadcf4e94899b636ba3fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basic: {fileID: 1965753160181718, guid: 013259eb5a9a90146911c351ea640f69, type: 2}
+  fast: {fileID: 0}
+  multi: {fileID: 0}
+  sniper: {fileID: 0}
+  currentPlacement: {fileID: 0}
+--- !u!114 &1195620931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1195620926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb49f7bc074384f41b57c84886f0c55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balance: 10000000
 --- !u!1 &1249415172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,7 +1971,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2359,12 +2377,12 @@ Prefab:
     - target: {fileID: 114982359429283660, guid: 013259eb5a9a90146911c351ea640f69,
         type: 2}
       propertyPath: levels.Array.data[0].projectileSpeed
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114982359429283660, guid: 013259eb5a9a90146911c351ea640f69,
         type: 2}
       propertyPath: levels.Array.data[0].fireRate
-      value: 2
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 114982359429283660, guid: 013259eb5a9a90146911c351ea640f69,
         type: 2}

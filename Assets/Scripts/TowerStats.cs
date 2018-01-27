@@ -21,6 +21,8 @@ public class TowerStats : MonoBehaviour {
         public float range = 20.0f;
         [Range(0.01f, 100.0f)]
         public float projectileSpeed = 1.0f;
+        [Range(0, 10000)]
+        public int price = 100;
 
         public TowerType type = TowerType.Single;
     }
