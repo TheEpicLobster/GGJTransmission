@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Text.RegularExpressions;
 
 public class ChemistryManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class ChemistryManager : MonoBehaviour
     public int LookAgainCost = 5;
     public List<InputField> Chemicals = new List<InputField>();
     public List<InputField> otherChem = new List<InputField>();
+    public InputField secret;
     public Button submit;
     public Button LookAgain;
     public Text scoreText;
@@ -35,8 +37,15 @@ public class ChemistryManager : MonoBehaviour
         int enabled = 0;
         foreach (InputField i in Chemicals)
         {
-            
-            
+            Regex regexItem = new Regex("^[a-zA-Z0-9 ]*$");
+
+            if (!regexItem.IsMatch(i.text))
+            {
+
+                Debug.Log("Stuff?");
+                secret.gameObject.SetActive(true);
+            }
+
             string name = i.name.Split('(')[0];
 
             
@@ -44,7 +53,6 @@ public class ChemistryManager : MonoBehaviour
             {
                     score+=scoreIncrease;
                     i.enabled = false;
-                    Debug.Log("Score + 1");
                 
             }
             else if (i.text != name)
@@ -69,6 +77,14 @@ public class ChemistryManager : MonoBehaviour
         }
 
         scoreText.text = "Score: " + score;
+    }
+
+    public void easterEgg()
+    {
+        if(secret.text == "7677")
+        {
+            countDown.text = "EasterEgg";
+        }
     }
 
     public void ReView()
