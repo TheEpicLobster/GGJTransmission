@@ -1645,7 +1645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb49f7bc074384f41b57c84886f0c55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balance: 10000
+  balance: 200
 --- !u!114 &1195620932
 MonoBehaviour:
   m_ObjectHideFlags: 0
