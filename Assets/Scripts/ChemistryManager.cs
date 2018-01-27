@@ -46,12 +46,14 @@ public class ChemistryManager : MonoBehaviour
                 secret.gameObject.SetActive(true);
             }
 
+            i.text = i.text.ToUpper(); ;
             string name = i.name.Split('(')[0];
 
             
             if (i.text == name && i.enabled == true)
             {
-                    score+=scoreIncrease;
+            
+                    score += scoreIncrease;
                     i.enabled = false;
                 
             }
