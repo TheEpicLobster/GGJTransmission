@@ -88,9 +88,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  health: 2
-  speed: 10
-  damage: 1
+  health: 500
+  speed: 1
+  damage: 10
+  payout: 50
 --- !u!114 &114552281686201440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,6 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 0}
   speed: 1.3
+  distanceTravelled: 0
 --- !u!212 &212757692250916260
 SpriteRenderer:
   m_ObjectHideFlags: 1

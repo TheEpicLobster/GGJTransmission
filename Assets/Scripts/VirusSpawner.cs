@@ -16,6 +16,7 @@ public class VirusSpawner : MonoBehaviour {
         public List<int> typeCount;
         [Range(0.1f, 10)]
         public float spawnInterval;
+        public int bonus = 100;
     }
     public List<Wave> waves;
 

@@ -15,21 +15,6 @@ public class EnemyTracker : MonoBehaviour {
 
     }
 
-    private IEnumerable PruneDeadEnemies()
-    {
-        do
-        {
-            for (int i = enemies.Count - 1; i >= 0; i--)
-            {
-                if (enemies[i] == null)
-                {
-                    enemies.RemoveAt(i);
-                }
-            }
-            yield return new WaitForSeconds(1.0f);
-        } while (runPrune);
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Virus")
@@ -52,31 +37,39 @@ public class EnemyTracker : MonoBehaviour {
 
     public GameObject GetLockedEnemy()
     {
-        // Return the enemy
-        if (lockedEnemy != null)
-        {
-            return lockedEnemy;
-        }
-
-        // Get a new enemy to lock on to
         if (enemies.Count == 0)
         {
             return null;
         }
 
-        int randIdx = Random.Range(0, enemies.Count);
-        // Loop until surviving enemy is located
-        int i = randIdx;
-        do
+        int nullCount = 0;
+        enemies.Sort((lhs, rhs) => 
         {
-            lockedEnemy = enemies[i];
-            i = (i + 1) % enemies.Count;
-            if (i == randIdx)
+            if (rhs == null)
             {
-                return lockedEnemy;
+                nullCount++;
+                return -1;
             }
-        } while (lockedEnemy == null);
-        return lockedEnemy;
+            if (lhs == null)
+            {
+                nullCount++;
+                return 1;
+            }
+            return (int)(rhs.GetComponent<FollowPath>().distanceTravelled - lhs.GetComponent<FollowPath>().distanceTravelled);
+        });
+
+        if (enemies[0] == null)
+        {
+            enemies.Clear();
+            return null;
+        }
+
+        if (nullCount != 0)
+        {
+            enemies.RemoveRange(enemies.Count - nullCount, nullCount);
+        }
+
+        return enemies[0];
     }
 
     private void GameOver()
