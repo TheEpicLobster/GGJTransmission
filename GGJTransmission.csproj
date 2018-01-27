@@ -296,6 +296,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BankAccount.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
+    <Compile Include="Assets\Scripts\ChemistryCalls.cs" />
     <Compile Include="Assets\Scripts\ChemistryManager.cs" />
     <Compile Include="Assets\Scripts\EnemyTracker.cs" />
     <Compile Include="Assets\Scripts\FollowPath.cs" />

@@ -117,7 +117,16 @@ public class ChemistryManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        
+        Debug.Log(ChemistryCalls.timesCalled);
+        if (ChemistryCalls.timesCalled == 1)
+        {
+            round = 2;
+        }
+        else
+        {
+            round = 6;
+        }
+
         foreach(InputField i in Chemicals)
         {
             

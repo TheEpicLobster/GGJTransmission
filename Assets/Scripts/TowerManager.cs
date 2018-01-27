@@ -130,6 +130,11 @@ public class TowerManager : MonoBehaviour {
 
     public void RefundPurchase()
     {
+        if(currentPlacement == null)
+        {
+            return;
+        }
+
         bank.Refund(currentPlacement.GetComponent<TowerStats>().GetStats().price);
         Destroy(currentPlacement);
         currentPlacement = null;

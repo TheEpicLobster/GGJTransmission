@@ -19,12 +19,19 @@ public class LoadChemistry : MonoBehaviour {
     {
         if (waveId % waves == 0 && waveId / (waves * 2 + 1) == 0)
         {
+            ChemistryCalls.timesCalled = 0;
+            GetComponent<TowerManager>().RefundPurchase();
             SceneManager.LoadScene("Scenes/Chemistry", LoadSceneMode.Additive);
         }
         else if (waveId % waves == 0 && waveId / (waves * 2 + 1) == 1)
         {
+            if (ChemistryCalls.timesCalled > 1)
+            {
+                ChemistryCalls.timesCalled = 0;
+            }
+            ChemistryCalls.timesCalled++;
+            GetComponent<TowerManager>().RefundPurchase();
             SceneManager.LoadScene("Scenes/Chem2", LoadSceneMode.Additive);
         }
-        //GameObject.Find("TowerDefenceObject").SetActive(false);
     }
 }
