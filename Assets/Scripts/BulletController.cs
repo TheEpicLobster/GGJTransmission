@@ -27,10 +27,9 @@ public class BulletController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "Virus")
         {
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<VirusStats>().TakeDamage(stats.damage);
             Destroy(gameObject);
         }
     }

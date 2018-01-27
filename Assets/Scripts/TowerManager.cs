@@ -4,13 +4,32 @@ using UnityEngine;
 
 public class TowerManager : MonoBehaviour {
 
+    BankAccount bank;
+
 	// Use this for initialization
 	void Start () {
-		
+        bank = GetComponent<BankAccount>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+
+    public void PurchaseBasic()
+    {
+
+    }
+
+    public void PurchaseFast()
+    {
+
+    }
+
+    public void PurchaseMulti()
+    {
+
+    }
+
+    public void PurchaseSniper()
+    {
+
+    }
 }
+

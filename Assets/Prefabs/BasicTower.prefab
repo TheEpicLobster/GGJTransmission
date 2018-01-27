@@ -131,20 +131,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - damage: 10
-    fireRate: 1
-    range: 100
-    projectileSpeed: 24
+  - damage: 1
+    fireRate: 24
+    range: 25
+    projectileSpeed: 2
     type: 0
   - damage: 20
     fireRate: 2
     range: 20
-    projectileSpeed: 1
+    projectileSpeed: 3
     type: 0
   - damage: 30
     fireRate: 3
     range: 20
-    projectileSpeed: 1
+    projectileSpeed: 10
     type: 0
 --- !u!212 &212311947864960802
 SpriteRenderer:
