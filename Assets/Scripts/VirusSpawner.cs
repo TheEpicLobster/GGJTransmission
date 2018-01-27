@@ -70,6 +70,7 @@ public class VirusSpawner : MonoBehaviour {
     void NewWave()
     {
         waveId++; // Starts at -1
+        Debug.Log(waveId);
         wave = waves[waveId];
         countRemaining = new List<int>();
         for(int i = 0; i < wave.typeCount.Count; i++)
@@ -128,7 +129,7 @@ public class VirusSpawner : MonoBehaviour {
     {
         for (int i = viruses.Count - 1; i >= 0; i--)
         {
-            if (viruses == null)
+            if (viruses[i] == null)
             {
                 viruses.RemoveAt(i);
             }
