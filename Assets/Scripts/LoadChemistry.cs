@@ -17,10 +17,12 @@ public class LoadChemistry : MonoBehaviour {
     // Update is called once per frame
     void LoadChemistryScene( int waveId, VirusSpawner.Wave wave)
     {
+        ChemistryCalls.towerDefence = GameObject.Find("TowerDefenceObject");
         if (waveId % waves == 0 && waveId / (waves * 2 + 1) == 0)
         {
-            ChemistryCalls.timesCalled = 0;
+            ChemistryCalls.timesCalled++;
             GetComponent<TowerManager>().RefundPurchase();
+            ChemistryCalls.towerDefence.SetActive(false);
             SceneManager.LoadScene("Scenes/Chemistry", LoadSceneMode.Additive);
         }
         else if (waveId % waves == 0 && waveId / (waves * 2 + 1) == 1)
@@ -31,6 +33,7 @@ public class LoadChemistry : MonoBehaviour {
             }
             ChemistryCalls.timesCalled++;
             GetComponent<TowerManager>().RefundPurchase();
+            ChemistryCalls.towerDefence.SetActive(false);
             SceneManager.LoadScene("Scenes/Chem2", LoadSceneMode.Additive);
         }
     }

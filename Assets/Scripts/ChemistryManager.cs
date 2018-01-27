@@ -74,6 +74,9 @@ public class ChemistryManager : MonoBehaviour
         {
             submit.enabled = false;
             LookAgain.enabled = false;
+
+
+            ChemistryCalls.towerDefence.SetActive(true);
             try
             {
                 SceneManager.UnloadSceneAsync("Chemistry");
@@ -117,7 +120,6 @@ public class ChemistryManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        Debug.Log(ChemistryCalls.timesCalled);
         if (ChemistryCalls.timesCalled == 1)
         {
             round = 2;
