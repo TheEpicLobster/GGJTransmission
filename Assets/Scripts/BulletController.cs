@@ -29,10 +29,9 @@ public class BulletController : MonoBehaviour {
     {
         if (other.gameObject.tag == "Virus")
         {
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<VirusStats>().TakeDamage(stats.damage);
             Destroy(gameObject);
         }
-        Debug.Log("Collison");
     }
 
     public void Shoot( Vector3 _dir, Vector3 _origin, TowerStats.Stats _stats)

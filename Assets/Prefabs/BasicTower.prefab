@@ -21,10 +21,10 @@ GameObject:
   - component: {fileID: 4004735369428058}
   - component: {fileID: 212311947864960802}
   - component: {fileID: 114847370362919284}
+  - component: {fileID: 50432215319651764}
   - component: {fileID: 58382493251191964}
   - component: {fileID: 58288424012979196}
   - component: {fileID: 114725941340134034}
-  - component: {fileID: 50004648916283904}
   - component: {fileID: 114982359429283660}
   m_Layer: 0
   m_Name: BasicTower
@@ -46,7 +46,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50004648916283904
+--- !u!50 &50432215319651764
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -131,20 +131,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - damage: 10
-    fireRate: 1
-    range: 20
-    projectileSpeed: 24
+  - damage: 1
+    fireRate: 24
+    range: 25
+    projectileSpeed: 2
     type: 0
   - damage: 20
     fireRate: 2
     range: 20
-    projectileSpeed: 1
+    projectileSpeed: 3
     type: 0
   - damage: 30
     fireRate: 3
     range: 20
-    projectileSpeed: 1
+    projectileSpeed: 10
     type: 0
 --- !u!212 &212311947864960802
 SpriteRenderer:

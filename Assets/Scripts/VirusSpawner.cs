@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VirusSpawner : MonoBehaviour {
     public List<GameObject> virusPrefabs;
-    [Range(0, 10)]
+    [Range(0.1f, 10)]
     public float spawnInterval;
 
     int countSinceLast;

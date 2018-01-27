@@ -19,11 +19,6 @@ public class VirusStats : MonoBehaviour {
         curHealth = health;
     }
 
-    private void Update()
-    {
-        TakeDamage(1);
-    }
-
     public void DamagePlayer()
     {
         player.TakeDamage(damage);
