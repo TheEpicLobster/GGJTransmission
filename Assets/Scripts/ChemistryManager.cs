@@ -5,24 +5,22 @@ using UnityEngine.UI;
 
 public class ChemistryManager : MonoBehaviour
 {
-    [Range(1, 11)]
+    [Range(1, 16)]
     public int round = 3;
 
     [Range(1, 10)]
     public float countdown = 3.0f;
+
+    [Range(1, 10)]
+    public int scoreIncrease = 5;
+
+    [Range(1, 10)]
+    public int scoreDecrease = 1;
+
+    [Range(1, 20)]
+    public int LookAgainCost = 5;
     public List<InputField> Chemicals = new List<InputField>();
     public List<InputField> otherChem = new List<InputField>();
-    //public InputField R;
-    //public InputField O1;
-    //public InputField O2;
-    //public InputField O3;
-    //public InputField HN;
-    //public InputField N;
-    //public InputField H;
-    //public InputField S;
-    //public InputField OH;
-    //public InputField CH31;
-    //public InputField CH32;
     public Button submit;
     public Button LookAgain;
     public Text scoreText;
@@ -44,20 +42,18 @@ public class ChemistryManager : MonoBehaviour
             
             if (i.text == name && i.enabled == true)
             {
-                    score++;
+                    score+=scoreIncrease;
                     i.enabled = false;
                     Debug.Log("Score + 1");
                 
             }
             else if (i.text != name)
             {
-                // i.transition = new Selectable.Transition(new Color(0,0,255));
-                // i.colors.normalColor.r = 0;// = new Color(0, 0, 255);
                 
                 ColorBlock cb = i.colors;
                 cb.normalColor = Color.red;
                 i.colors = cb;
-                score--;
+                score-= scoreDecrease;
             }
             if (i.enabled == true)
             {
@@ -72,14 +68,13 @@ public class ChemistryManager : MonoBehaviour
             LookAgain.enabled = false;
         }
 
-
-
         scoreText.text = "Score: " + score;
     }
 
     public void ReView()
     {
-        score -= 3;
+        score -= LookAgainCost;
+        
         scoreText.text = "Score: " + score;
 
         countdown = 5;
@@ -93,31 +88,10 @@ public class ChemistryManager : MonoBehaviour
                 otherChem.Add(i);
             }
         }
-        //if (countdown <= 0)
-        //{
-        //    foreach (InputField x in otherChem)
-        //    {
-        //        x.text = "";
-
-        //    }
-        //    otherChem.Clear();
-        //}
     }
 	// Use this for initialization
 	void Start ()
     {
-
-        //Chemicals.Add(R);
-        //Chemicals.Add(O1);
-        //Chemicals.Add(O2);
-        //Chemicals.Add(O3);
-        //Chemicals.Add(HN);
-        //Chemicals.Add(N);
-        //Chemicals.Add(H);
-        //Chemicals.Add(S);
-        //Chemicals.Add(OH);
-        //Chemicals.Add(CH31);
-        //Chemicals.Add(CH32);
         
         foreach(InputField i in Chemicals)
         {
