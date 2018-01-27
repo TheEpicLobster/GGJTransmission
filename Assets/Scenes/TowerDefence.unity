@@ -919,6 +919,7 @@ GameObject:
   - component: {fileID: 740467613}
   - component: {fileID: 740467615}
   - component: {fileID: 740467614}
+  - component: {fileID: 740467616}
   m_Layer: 5
   m_Name: MoneyCount
   m_TagString: Untagged
@@ -983,6 +984,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 740467612}
+--- !u!114 &740467616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 740467612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c5993aebf2f9c418aec1376ac7f3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 1195620931}
 --- !u!1 &784366906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,9 +1469,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basic: {fileID: 1278954351388656, guid: 3e8b234c15dad3b43b5d13bbde69f575, type: 2}
-  fast: {fileID: 0}
-  multi: {fileID: 0}
-  sniper: {fileID: 0}
+  fast: {fileID: 1278954351388656, guid: 08a64acce15a7824084745138f34586b, type: 2}
+  multi: {fileID: 1278954351388656, guid: f8a25bdff584a5e4885115f0811718f3, type: 2}
+  sniper: {fileID: 1278954351388656, guid: 45fe139c431886a478681b7d7e4fb5a1, type: 2}
   currentPlacement: {fileID: 0}
 --- !u!114 &1195620931
 MonoBehaviour:
@@ -1647,9 +1660,49 @@ MonoBehaviour:
   - {fileID: 1370115241666668, guid: c0b89aac958e4e944a593f9e11589a42, type: 2}
   - {fileID: 1887526572099678, guid: 4e4a96ac4ae697948a1d0081a97fc5c0, type: 2}
   - {fileID: 1170495806595158, guid: aff424ef68bb05b49bef11a0a42a2b01, type: 2}
-  spawnInterval: 0.1
   healthBarPrefab: {fileID: 1656735094924270, guid: 55b4e1d61e3608d4da84237a10a2da81,
     type: 2}
+  waves:
+  - typeCount: 01000000
+    spawnInterval: 1
+  - typeCount: 0a000000
+    spawnInterval: 2
+  - typeCount: 0500000001000000
+    spawnInterval: 2
+  - typeCount: 1400000005000000
+    spawnInterval: 1
+  - typeCount: 32000000
+    spawnInterval: 0.5
+  - typeCount: 050000000a00000001000000
+    spawnInterval: 1
+  - typeCount: 000000000a000000050000000000000000000000
+    spawnInterval: 0.5
+  - typeCount: 
+    spawnInterval: 0
+  - typeCount: 
+    spawnInterval: 0
+  - typeCount: 
+    spawnInterval: 0
+  - typeCount: 
+    spawnInterval: 0
+  - typeCount: 
+    spawnInterval: 0
+  - typeCount: 
+    spawnInterval: 0
+  - typeCount: 
+    spawnInterval: 0
+  - typeCount: 
+    spawnInterval: 0
+  - typeCount: 
+    spawnInterval: 0
+  - typeCount: 
+    spawnInterval: 0
+  - typeCount: 
+    spawnInterval: 0
+  - typeCount: 
+    spawnInterval: 0
+  - typeCount: 
+    spawnInterval: 0
 --- !u!4 &1263567872
 Transform:
   m_ObjectHideFlags: 0

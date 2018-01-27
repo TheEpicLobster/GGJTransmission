@@ -98,7 +98,7 @@ public class TowerManager : MonoBehaviour {
         if (bank.Purchase(prefab.GetComponent<TowerStats>().GetStats().price))
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            currentPlacement = Instantiate(basic, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
+            currentPlacement = Instantiate(prefab, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
             currentPlacement.GetComponent<ShootEnemies>().enabled = false;
             currentPlacement.transform.GetChild(0).gameObject.AddComponent<IntersectionTracking>();
         }

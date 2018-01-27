@@ -20,12 +20,6 @@ public class MoneyUIUpdator : MonoBehaviour {
         text.text = manager.balance.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void GainMonies(int newBalance)
     {
         text.text = newBalance.ToString();
