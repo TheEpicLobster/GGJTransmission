@@ -53,6 +53,7 @@ public class TowerManager : MonoBehaviour {
                 {
                     Destroy(currentPlacement.transform.GetChild(0).gameObject.GetComponent<IntersectionTracking>());
                     currentPlacement.GetComponent<ShootEnemies>().enabled = true;
+                    currentPlacement.transform.GetChild(1).gameObject.SetActive(false);
                 }
                 else
                 {
@@ -101,6 +102,9 @@ public class TowerManager : MonoBehaviour {
             currentPlacement = Instantiate(prefab, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
             currentPlacement.GetComponent<ShootEnemies>().enabled = false;
             currentPlacement.transform.GetChild(0).gameObject.AddComponent<IntersectionTracking>();
+            currentPlacement.transform.GetChild(1).gameObject.SetActive(true);
+            float range = prefab.GetComponent<TowerStats>().GetStats().range;
+            currentPlacement.transform.GetChild(1).localScale = new Vector3(range * 2, 1, range * 2);
         }
     }
 
@@ -126,6 +130,11 @@ public class TowerManager : MonoBehaviour {
 
     public void RefundPurchase()
     {
+        if(currentPlacement == null)
+        {
+            return;
+        }
+
         bank.Refund(currentPlacement.GetComponent<TowerStats>().GetStats().price);
         Destroy(currentPlacement);
         currentPlacement = null;

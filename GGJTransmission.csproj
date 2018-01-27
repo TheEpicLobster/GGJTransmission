@@ -293,6 +293,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BankAccount.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
+    <Compile Include="Assets\Scripts\ChemistryCalls.cs" />
     <Compile Include="Assets\Scripts\ChemistryManager.cs" />
     <Compile Include="Assets\Scripts\EnemyTracker.cs" />
     <Compile Include="Assets\Scripts\FollowPath.cs" />
@@ -300,6 +301,7 @@
     <Compile Include="Assets\Scripts\HealthManager.cs" />
     <Compile Include="Assets\Scripts\HealthUIUpdater.cs" />
     <Compile Include="Assets\Scripts\IntersectionTracking.cs" />
+    <Compile Include="Assets\Scripts\LoadChemistry.cs" />
     <Compile Include="Assets\Scripts\loadScenes.cs" />
     <Compile Include="Assets\Scripts\MoneyUIUpdator.cs" />
     <Compile Include="Assets\Scripts\PathCreator.cs" />
