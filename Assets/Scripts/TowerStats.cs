@@ -21,6 +21,8 @@ public class TowerStats : MonoBehaviour {
         public float range = 20.0f;
         [Range(0.01f, 100.0f)]
         public float projectileSpeed = 1.0f;
+        [Range(0, 10000)]
+        public int price = 100;
 
         public TowerType type = TowerType.Single;
     }
@@ -32,15 +34,8 @@ public class TowerStats : MonoBehaviour {
     // Use this for initialization
     void Start() {
         level = 0;
-        CircleCollider2D[] colliders = GetComponents<CircleCollider2D>();
-        if (colliders[0].radius > colliders[1].radius)
-        {
-            colliders[0].radius = GetStats().range;
-        }
-        else
-        {
-            colliders[1].radius = GetStats().range;
-        }
+        GetComponent<CircleCollider2D>().radius = GetStats().range;
+        
     }
 
 
