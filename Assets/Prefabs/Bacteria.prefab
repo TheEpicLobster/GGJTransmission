@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 95973692162182678}
   - component: {fileID: 114552281686201440}
   - component: {fileID: 114127436778059344}
-  - component: {fileID: 58774851956247480}
   - component: {fileID: 50268855689259560}
+  - component: {fileID: 58774851956247480}
   m_Layer: 0
   m_Name: Bacteria
   m_TagString: Untagged
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
+  speed: 1.3
 --- !u!212 &212757692250916260
 SpriteRenderer:
   m_ObjectHideFlags: 1

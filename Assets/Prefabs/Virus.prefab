@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 95118748186518508}
   - component: {fileID: 114445427304661488}
   - component: {fileID: 114978871434331876}
+  - component: {fileID: 50220043273427912}
   - component: {fileID: 61367748593966066}
-  - component: {fileID: 50029253308707992}
   m_Layer: 0
   m_Name: Virus
   m_TagString: Untagged
@@ -45,7 +45,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50029253308707992
+--- !u!50 &50220043273427912
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
+  speed: 5
 --- !u!114 &114978871434331876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  health: 500
+  health: 1000
   speed: 20
   damage: 1
 --- !u!212 &212227871539859114

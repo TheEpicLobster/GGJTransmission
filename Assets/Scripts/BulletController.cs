@@ -27,12 +27,12 @@ public class BulletController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "Virus")
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
-        Debug.Log("Collison");
     }
 
     public void Shoot( Vector3 _dir, Vector3 _origin, TowerStats.Stats _stats)

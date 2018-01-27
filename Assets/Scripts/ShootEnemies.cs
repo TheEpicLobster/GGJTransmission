@@ -24,7 +24,7 @@ public class ShootEnemies : MonoBehaviour {
         TrackEnemy();
 
         countSinceLast++;
-        if (countSinceLast > fireGap)
+        if (countSinceLast > fireGap && enemy != null)
         {
             countSinceLast = 0;
             ShootTarget();
@@ -39,7 +39,6 @@ public class ShootEnemies : MonoBehaviour {
         // No enemies in range
         if (enemy == null)
         {
-            Debug.Log("No enemies");
             return;
         }
 

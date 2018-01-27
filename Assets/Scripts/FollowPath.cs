@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowPath : MonoBehaviour {
     public PathCreator path;
     [Range(0.01f, 20.0f)]
-    float speed = 5.0f;
+    public float speed = 5.0f;
     int index = 0;
     Vector3 target;
     VirusStats stats;

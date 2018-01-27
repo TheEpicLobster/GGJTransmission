@@ -591,7 +591,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 3b3eef611a024e941a10e35ff6636d84, type: 2}
+  - {fileID: 2100000, guid: 919bd1e37f5891c45b6220d9b3725849, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -858,7 +858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virusPrefabs:
   - {fileID: 1397345497212238, guid: 412116233080c494f89136eeb275ad10, type: 2}
-  - {fileID: 1170495806595158, guid: c006b917d06b2e741b497d19817cf955, type: 2}
+  - {fileID: 1170495806595158, guid: c4eebfc809b1e0c44928e976198a4050, type: 2}
   - {fileID: 1370115241666668, guid: c0b89aac958e4e944a593f9e11589a42, type: 2}
   spawnInterval: 0.5
   healthBarPrefab: {fileID: 1656735094924270, guid: 55b4e1d61e3608d4da84237a10a2da81,
@@ -1036,7 +1036,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1334097798}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 16, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1435,12 +1435,20 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 50004648916283904, guid: 013259eb5a9a90146911c351ea640f69,
+    - target: {fileID: 0}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50432215319651764, guid: 013259eb5a9a90146911c351ea640f69,
         type: 2}
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 50004648916283904, guid: 013259eb5a9a90146911c351ea640f69,
+    - target: {fileID: 50432215319651764, guid: 013259eb5a9a90146911c351ea640f69,
         type: 2}
       propertyPath: m_Simulated
       value: 1
