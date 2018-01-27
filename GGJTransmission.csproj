@@ -306,8 +306,6 @@
     <Compile Include="Assets\Scripts\ShootEnemies.cs" />
     <Compile Include="Assets\Scripts\TowerManager.cs" />
     <Compile Include="Assets\Scripts\TowerStats.cs" />
-    <Compile Include="Assets\Scripts\VirusHealth.cs" />
-    <Compile Include="Assets\Scripts\VirusManager.cs" />
     <Compile Include="Assets\Scripts\VirusSpawner.cs" />
     <Compile Include="Assets\Scripts\VirusStats.cs" />
   </ItemGroup>

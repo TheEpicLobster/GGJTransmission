@@ -1675,34 +1675,10 @@ MonoBehaviour:
     spawnInterval: 0.1
   - typeCount: 050000000a00000001000000
     spawnInterval: 0.5
-  - typeCount: 000000000a000000050000000000000000000000
+  - typeCount: 000000000a00000005000000
     spawnInterval: 0.1
-  - typeCount: 
-    spawnInterval: 0
-  - typeCount: 
-    spawnInterval: 0
-  - typeCount: 
-    spawnInterval: 0
-  - typeCount: 
-    spawnInterval: 0
-  - typeCount: 
-    spawnInterval: 0
-  - typeCount: 
-    spawnInterval: 0
-  - typeCount: 
-    spawnInterval: 0
-  - typeCount: 
-    spawnInterval: 0
-  - typeCount: 
-    spawnInterval: 0
-  - typeCount: 
-    spawnInterval: 0
-  - typeCount: 
-    spawnInterval: 0
-  - typeCount: 
-    spawnInterval: 0
-  - typeCount: 
-    spawnInterval: 0
+  - typeCount: 3c0000002800000014000000
+    spawnInterval: 0.3
 --- !u!4 &1263567872
 Transform:
   m_ObjectHideFlags: 0

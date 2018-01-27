@@ -66,10 +66,15 @@ public class EnemyTracker : MonoBehaviour {
 
         int randIdx = Random.Range(0, enemies.Count);
         // Loop until surviving enemy is located
+        int i = randIdx;
         do
         {
-            lockedEnemy = enemies[randIdx];
-            randIdx = (randIdx + 1) % enemies.Count;
+            lockedEnemy = enemies[i];
+            i = (i + 1) % enemies.Count;
+            if (i == randIdx)
+            {
+                return lockedEnemy;
+            }
         } while (lockedEnemy == null);
         return lockedEnemy;
     }
@@ -78,5 +83,10 @@ public class EnemyTracker : MonoBehaviour {
     {
         runPrune = false;
         enemies.Clear();
+    }
+
+    private void Restart()
+    {
+
     }
 }
