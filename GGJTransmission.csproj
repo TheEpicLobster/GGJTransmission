@@ -302,6 +302,7 @@
     <Compile Include="Assets\Scripts\GameStateManager.cs" />
     <Compile Include="Assets\Scripts\HealthManager.cs" />
     <Compile Include="Assets\Scripts\HealthUIUpdater.cs" />
+    <Compile Include="Assets\Scripts\IntersectionTracking.cs" />
     <Compile Include="Assets\Scripts\PathCreator.cs" />
     <Compile Include="Assets\Scripts\PathManager.cs" />
     <Compile Include="Assets\Scripts\ShootEnemies.cs" />

@@ -34,15 +34,8 @@ public class TowerStats : MonoBehaviour {
     // Use this for initialization
     void Start() {
         level = 0;
-        CircleCollider2D[] colliders = GetComponents<CircleCollider2D>();
-        if (colliders[0].radius > colliders[1].radius)
-        {
-            colliders[0].radius = GetStats().range;
-        }
-        else
-        {
-            colliders[1].radius = GetStats().range;
-        }
+        GetComponent<CircleCollider2D>().radius = GetStats().range;
+        
     }
 
 

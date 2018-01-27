@@ -22,8 +22,6 @@ public class BankAccount : MonoBehaviour {
             return false;
         }
 
-        Debug.Log("Oi rich kid");
-
         balance -= cost;
         CallIncomeChanged();
         return true;
