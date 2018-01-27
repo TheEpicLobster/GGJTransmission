@@ -8,6 +8,8 @@ public class BulletController : MonoBehaviour {
     TowerStats.Stats stats;
     Vector3 origin;
 
+    int targetLock = 0;
+
     bool inFlight = false;    
 	
 	void FixedUpdate () {
@@ -29,8 +31,11 @@ public class BulletController : MonoBehaviour {
     {
         if (other.gameObject.tag == "Virus")
         {
-            other.gameObject.GetComponent<VirusStats>().TakeDamage(stats.damage);
-            Destroy(gameObject);
+            if (System.Threading.Interlocked.CompareExchange(ref targetLock, 1, 0) == 0)
+            {
+                other.gameObject.GetComponent<VirusStats>().TakeDamage(stats.damage);
+                Destroy(gameObject);
+            }
         }
     }
 

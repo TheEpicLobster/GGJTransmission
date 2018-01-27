@@ -10,6 +10,9 @@ public class FollowPath : MonoBehaviour {
     Vector3 target;
     VirusStats stats;
 
+    [HideInInspector]
+    public float distanceTravelled = 0;
+
 
     // Use this for initialization
     void Start () {
@@ -68,6 +71,9 @@ public class FollowPath : MonoBehaviour {
     void Move()
     {
         float step = speed * Time.fixedDeltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target, step); 
+        Vector3 old = transform.position;
+        transform.position = Vector3.MoveTowards(transform.position, target, step);
+
+        distanceTravelled += (transform.position - old).magnitude;
     }
 }

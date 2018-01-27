@@ -1644,7 +1644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb49f7bc074384f41b57c84886f0c55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balance: 1
+  balance: 200
 --- !u!1 &1248845567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,6 +1656,7 @@ GameObject:
   - component: {fileID: 1248845571}
   - component: {fileID: 1248845570}
   - component: {fileID: 1248845569}
+  - component: {fileID: 1248845572}
   m_Layer: 5
   m_Name: StartWaveButton
   m_TagString: Untagged
@@ -1767,6 +1768,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1248845567}
+--- !u!114 &1248845572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1248845567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2e5dd019920d5f40b6b1d3ea3e6fd18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1249415172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,7 +1914,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 200
+  m_Text: 2000
 --- !u!222 &1262747253
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1937,30 +1949,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virusPrefabs:
-  - {fileID: 1397345497212238, guid: 412116233080c494f89136eeb275ad10, type: 2}
-  - {fileID: 1170495806595158, guid: c4eebfc809b1e0c44928e976198a4050, type: 2}
   - {fileID: 1370115241666668, guid: c0b89aac958e4e944a593f9e11589a42, type: 2}
   - {fileID: 1887526572099678, guid: 4e4a96ac4ae697948a1d0081a97fc5c0, type: 2}
+  - {fileID: 1170495806595158, guid: c4eebfc809b1e0c44928e976198a4050, type: 2}
+  - {fileID: 1397345497212238, guid: 412116233080c494f89136eeb275ad10, type: 2}
   - {fileID: 1170495806595158, guid: aff424ef68bb05b49bef11a0a42a2b01, type: 2}
   healthBarPrefab: {fileID: 1656735094924270, guid: 55b4e1d61e3608d4da84237a10a2da81,
     type: 2}
   waves:
   - typeCount: 01000000
     spawnInterval: 1
+    bonus: 100
   - typeCount: 0a000000
     spawnInterval: 0.5
+    bonus: 120
   - typeCount: 0500000001000000
     spawnInterval: 0.5
+    bonus: 140
   - typeCount: 1400000005000000
     spawnInterval: 0.5
-  - typeCount: 32000000
+    bonus: 160
+  - typeCount: c8000000
     spawnInterval: 0.1
+    bonus: 180
   - typeCount: 050000000a00000001000000
     spawnInterval: 0.5
+    bonus: 200
   - typeCount: 000000000a00000005000000
     spawnInterval: 0.1
+    bonus: 220
   - typeCount: 3c0000002800000014000000
     spawnInterval: 0.3
+    bonus: 240
 --- !u!4 &1263567872
 Transform:
   m_ObjectHideFlags: 0
@@ -2247,7 +2267,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2000
+  m_Text: 100
 --- !u!222 &1427020504
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2442,7 +2462,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 200
+  m_Text: 500
 --- !u!222 &1697910161
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2611,7 +2631,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2000
+  m_Text: 500
 --- !u!222 &1907820071
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -7,6 +7,18 @@ public class BankAccount : MonoBehaviour {
 
     public System.Action<int> incomeChanged;
 
+    private void Awake()
+    {
+        GameObject spawner = GameObject.Find("Spawner");
+        VirusSpawner spawnerScript = spawner.GetComponent<VirusSpawner>();
+        spawnerScript.waveComplete += GetWaveBonus;
+    }
+
+    void GetWaveBonus( int waveId, VirusSpawner.Wave wave)
+    {
+        ReceivePayout(wave.bonus);
+    }
+
     public void ReceivePayout(int size)
     {
         balance += size;
