@@ -6,7 +6,6 @@ public class EnemyTracker : MonoBehaviour {
 
     List<GameObject> enemies;
     GameObject lockedEnemy;
-    bool runPrune = true;
 
     private void Start()
     {
@@ -74,7 +73,6 @@ public class EnemyTracker : MonoBehaviour {
 
     private void GameOver()
     {
-        runPrune = false;
         enemies.Clear();
     }
 
