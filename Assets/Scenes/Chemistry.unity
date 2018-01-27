@@ -1814,7 +1814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   round: 9
-  countdown: 1
+  countdown: 8
   scoreIncrease: 5
   scoreDecrease: 1
   LookAgainCost: 5

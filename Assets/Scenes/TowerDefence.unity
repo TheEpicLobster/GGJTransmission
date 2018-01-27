@@ -1644,7 +1644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb49f7bc074384f41b57c84886f0c55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balance: 1
+  balance: 200
 --- !u!1 &1248845567
 GameObject:
   m_ObjectHideFlags: 0
