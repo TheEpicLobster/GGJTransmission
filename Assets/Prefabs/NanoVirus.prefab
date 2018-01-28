@@ -116,6 +116,7 @@ MonoBehaviour:
   speed: 15
   damage: 20
   payout: 100
+  source: {fileID: 1749374886055238, guid: 62222c0ba210d72459ca49548ea7b5b4, type: 2}
 --- !u!212 &212227871539859114
 SpriteRenderer:
   m_ObjectHideFlags: 1
