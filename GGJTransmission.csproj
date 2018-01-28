@@ -193,9 +193,6 @@
     <Reference Include="UnityEngine.WindModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
     </Reference>
-    <Reference Include="Facebook.Unity.Settings">
-      <HintPath>Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -298,6 +295,7 @@
     <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\ChemistryCalls.cs" />
     <Compile Include="Assets\Scripts\ChemistryManager.cs" />
+    <Compile Include="Assets\Scripts\DontUnloadManager.cs" />
     <Compile Include="Assets\Scripts\EnemyTracker.cs" />
     <Compile Include="Assets\Scripts\FollowPath.cs" />
     <Compile Include="Assets\Scripts\GameStateManager.cs" />
@@ -307,7 +305,6 @@
     <Compile Include="Assets\Scripts\LoadChemistry.cs" />
     <Compile Include="Assets\Scripts\loadScenes.cs" />
     <Compile Include="Assets\Scripts\MoneyUIUpdator.cs" />
-    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\PathCreator.cs" />
     <Compile Include="Assets\Scripts\PathManager.cs" />
     <Compile Include="Assets\Scripts\ShootEnemies.cs" />
