@@ -322,7 +322,9 @@ MonoBehaviour:
     from a superbug attack that starts in his lungs.  \n\nYour mission is to help
     him defeat the superbugs. You will start by defending the lungs and you need to
     destroy every last bit of those intruders...well at least in the lungs.  Every
-    breath Ali takes transmits the infection to someone else. So be fast."
+    breath Ali takes transmits the infection to someone else. So be fast.\n\nOur Random
+    wiki article https://en.wikipedia.org/wiki/List_of_Surrey_List_A_cricket_records\n\nCan
+    you find the easteregg? 7677"
 --- !u!222 &241886805
 CanvasRenderer:
   m_ObjectHideFlags: 0
