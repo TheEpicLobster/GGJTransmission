@@ -30,6 +30,8 @@ public class ChemistryManager : MonoBehaviour
     public Text countDown;
     private int score = 0;
     private bool review = false;
+
+    public GameObject easterEggObj;
     
 
     public void Submit_Click()
@@ -98,7 +100,9 @@ public class ChemistryManager : MonoBehaviour
     {
         if(secret.text == "7677")
         {
-            countDown.text = "EasterEgg";
+            score = 0;
+            easterEggObj.SetActive(true);
+            
         }
     }
 
