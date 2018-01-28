@@ -19,7 +19,7 @@ public class VirusStats : MonoBehaviour {
 
     void Start()
     {
-        curHealth = health;
+        curHealth = (int)(health * ChemistryCalls.VirusHealthMult);
     }
 
     public void DamagePlayer()

@@ -20,7 +20,7 @@ public class ChemistryManager : MonoBehaviour
     public int scoreDecrease = 1;
 
     [Range(1, 20)]
-    public int LookAgainCost = 5;
+    public int LookAgainCost = 3;
     public List<InputField> Chemicals = new List<InputField>();
     public List<InputField> otherChem = new List<InputField>();
     public InputField secret;
@@ -76,8 +76,9 @@ public class ChemistryManager : MonoBehaviour
         {
             submit.enabled = false;
             LookAgain.enabled = false;
-
-
+            score = Mathf.Max(-(round * 5), score);
+            ChemistryCalls.VirusHealthMult = 1.0f / Mathf.Lerp(0.5f, 2, ((score / (round * 5))+ 1) / 2);
+            Debug.Log(ChemistryCalls.VirusHealthMult);
             ChemistryCalls.towerDefence.SetActive(true);
             try
             {
