@@ -47,19 +47,21 @@ public class TowerManager : MonoBehaviour {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             currentPlacement.transform.position = new Vector3(pos.x, pos.y, currentPlacement.transform.position.z);
 
-            if (Input.GetMouseButtonDown(0))
+            if (currentPlacement.transform.GetChild(0).gameObject.GetComponent<IntersectionTracking>().CanPlace() && OffTrack())
             {
-                if (currentPlacement.transform.GetChild(0).gameObject.GetComponent<IntersectionTracking>().CanPlace() && OffTrack())
-                {
+                currentPlacement.transform.GetChild(1).gameObject.GetComponent<MeshRenderer>().material.color = new Color(0.5f, 0.5f, 0.5f, 0.5f);
+                if (Input.GetMouseButtonDown(0))
+                { 
                     Destroy(currentPlacement.transform.GetChild(0).gameObject.GetComponent<IntersectionTracking>());
                     currentPlacement.GetComponent<ShootEnemies>().enabled = true;
                     currentPlacement.transform.GetChild(1).gameObject.SetActive(false);
+                    currentPlacement = null;
                 }
-                else
-                {
-                    RefundPurchase();
-                }
-                currentPlacement = null;
+            }
+            else
+            {
+
+                currentPlacement.transform.GetChild(1).gameObject.GetComponent<MeshRenderer>().material.color = new Color(0.7f, 0, 0, 0.5f);
             }
         }
 
