@@ -1886,7 +1886,7 @@ MonoBehaviour:
   countdown: 10
   scoreIncrease: 5
   scoreDecrease: 1
-  LookAgainCost: 5
+  LookAgainCost: 3
   Chemicals:
   - {fileID: 1918183427}
   - {fileID: 1541008536}
