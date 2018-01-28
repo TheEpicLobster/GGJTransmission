@@ -89,7 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   health: 500
-  speed: 1
+  speed: 2
   damage: 10
   payout: 50
 --- !u!114 &114552281686201440

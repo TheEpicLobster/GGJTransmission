@@ -2138,7 +2138,7 @@ MonoBehaviour:
   - typeCount: 0000000000000000000000000000000005000000
     spawnInterval: 0.5
     bonus: 420
-  - typeCount: 0000000000000000000000004b00000000000000
+  - typeCount: 000000000000000014000000320000000a000000
     spawnInterval: 1
     bonus: 440
   - typeCount: 0000000000000000000000000000000014000000
@@ -2148,7 +2148,7 @@ MonoBehaviour:
     spawnInterval: 0.1
     bonus: 480
   - typeCount: 0000000000000000000000000000000040420f00
-    spawnInterval: 2
+    spawnInterval: 0.5
     bonus: 500
 --- !u!4 &1263567872
 Transform:
