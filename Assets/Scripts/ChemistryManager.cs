@@ -21,6 +21,7 @@ public class ChemistryManager : MonoBehaviour
 
     [Range(1, 20)]
     public int LookAgainCost = 3;
+
     public List<InputField> Chemicals = new List<InputField>();
     public List<InputField> otherChem = new List<InputField>();
     public InputField secret;

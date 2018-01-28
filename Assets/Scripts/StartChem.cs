@@ -12,5 +12,13 @@ public class StartChem : MonoBehaviour {
         canvas.SetActive(true);
         Destroy(gameObject);
     }
+    public void Star()
+    {
+        canvas.SetActive(true);
+    }
+    public void close()
+    {
+        canvas.SetActive(false);
+    }
 
 }
