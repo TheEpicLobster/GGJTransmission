@@ -7,11 +7,19 @@ public class loadScenes : MonoBehaviour {
 
     public void loadScene()
     {
-        //Application.LoadLevel("TowerDefence");
-        //loadScene("TowerDefence");
-        //UnityEngine.SceneManagement.loa
-        Debug.Log("Hi");
         SceneManager.LoadScene("Scenes/TowerDefence");
 
+    }
+
+    public void loadInstructions()
+    {
+
+        SceneManager.LoadScene("Scenes/Instructions");
+    }
+
+    public void loadMenu()
+    {
+
+        SceneManager.LoadScene("Scenes/MainMenu");
     }
 }
