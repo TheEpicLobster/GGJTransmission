@@ -112,8 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  health: 200
-  speed: 20
+  health: 300
+  speed: 15
   damage: 20
   payout: 100
   source: {fileID: 1749374886055238, guid: 62222c0ba210d72459ca49548ea7b5b4, type: 2}
