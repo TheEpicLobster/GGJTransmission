@@ -21,4 +21,8 @@ public class StartChem : MonoBehaviour {
         canvas.SetActive(false);
     }
 
+    public void end()
+    {
+        Application.Quit();
+    }
 }
