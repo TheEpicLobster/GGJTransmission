@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour {
     [Range(0, 999)]
@@ -48,5 +49,6 @@ public class HealthManager : MonoBehaviour {
     public void ResetHealth()
     {
         health = defaultHealth;
+        SceneManager.LoadScene("Scenes/MainMenu", LoadSceneMode.Single);
     }
 }

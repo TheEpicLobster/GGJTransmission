@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - damage: 2
+  - damage: 4
     fireRate: 10
     range: 25
     projectileSpeed: 20

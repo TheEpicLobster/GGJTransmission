@@ -1665,7 +1665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3ee424376352f4b8055e8fc7042648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves: 1
+  waves: 5
 --- !u!1 &1248845567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,6 +2002,45 @@ MonoBehaviour:
   - typeCount: 3c0000002800000014000000
     spawnInterval: 0.3
     bonus: 240
+  - typeCount: 190000000a0000000a00000001000000
+    spawnInterval: 0.5
+    bonus: 260
+  - typeCount: 000000000000000064000000
+    spawnInterval: 0.1
+    bonus: 280
+  - typeCount: 00000000000000006400000001000000
+    spawnInterval: 0.2
+    bonus: 300
+  - typeCount: 00000000000000000000000014000000
+    spawnInterval: 1
+    bonus: 320
+  - typeCount: 3c00000028000000140000001400000014000000
+    spawnInterval: 0.3
+    bonus: 340
+  - typeCount: 0000000000000000000000000000000064000000
+    spawnInterval: 0.3
+    bonus: 360
+  - typeCount: 14000000140000003c0000006400000064000000
+    spawnInterval: 0.2
+    bonus: 380
+  - typeCount: 000000000000000064000000c8000000c8000000
+    spawnInterval: 0.1
+    bonus: 400
+  - typeCount: 0000000000000000e803000000000000e8030000
+    spawnInterval: 0.1
+    bonus: 420
+  - typeCount: 00000000000000000000000000000000d0070000
+    spawnInterval: 0.2
+    bonus: 440
+  - typeCount: 000000000000000000000000e8030000d0070000
+    spawnInterval: 0.2
+    bonus: 460
+  - typeCount: 0100000001000000010000000100000001000000
+    spawnInterval: 2
+    bonus: 480
+  - typeCount: 0000000000000000000000000000000040420f00
+    spawnInterval: 2
+    bonus: 380
 --- !u!4 &1263567872
 Transform:
   m_ObjectHideFlags: 0
