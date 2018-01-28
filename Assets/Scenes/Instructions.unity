@@ -395,8 +395,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22.3, y: 6.8}
-  m_SizeDelta: {x: 799.6, y: 428.3}
+  m_AnchoredPosition: {x: -0.000011444, y: 3.9034944}
+  m_SizeDelta: {x: 960, y: 434.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1328267025
 MonoBehaviour:
@@ -432,15 +432,17 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Controls: \nTower Defence - Click the tower in the top left box to select
     the tower. \nClick somewhere on the lung (not on the track) to place the tower.
-    \n\nTowers: \n* Mid range turret - Medium damage \n* High speed - Low damage \n*
-    Multi shot - Med-high damage \n* Sniper/Long range - High Damage \n\nChemistry
+    \n\nTowers: \t\t\t\t\t\t\t\t\t\t\t\t\t\t\tHotkeys:\n* Mid range turret - Medium
+    damage\t\t\t\t\t1\n* High speed - Low damage\t\t\t\t\t\t\t\t2\t\n* Multi shot
+    - Med-high damage\t\t\t\t\t\t\t3\n* Sniper/Long range - High Damage\t\t\t\t\t4\n\nDeselect\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEsc\t\n\nChemistry
     Lesson- After five waves the chemistry mini-game pops up. A chart of penicillin
     or other useful drugs will appear to help you with your tower defense progress.
     However if you get it wrong it will deter your progress and make it harder. You
     have five seconds to memorise the chart, afterwards symbols will disappear which
     you have to fill in. Your score will decrease by 2 if you get it wrong and increase
     by 5 if you get it right. You can look at the chart again, however it will cost
-    you 3 of your score."
+    you 3 of your score.\n\nIf you don't do well the virus may have a sheid in future
+    waves. If you do well the virusus will have a lower resistance to your towers."
 --- !u!222 &1328267026
 CanvasRenderer:
   m_ObjectHideFlags: 0
