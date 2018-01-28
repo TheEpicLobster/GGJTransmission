@@ -29,11 +29,13 @@ public class VirusStats : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
+        GameObject.Find("OnHitSound").GetComponent<AudioSource>().Play(); ;
         curHealth -= damage;
         curHealth = (curHealth <= 0) ? 0 : curHealth;
         GetComponentInChildren<UnityEngine.UI.Slider>().value = curHealth;
         if (curHealth <= 0)
         {
+            //happens on death
             player.GetComponent<BankAccount>().ReceivePayout(payout);
             Destroy(gameObject);
         }

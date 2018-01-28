@@ -304,6 +304,7 @@
     <Compile Include="Assets\Scripts\LoadChemistry.cs" />
     <Compile Include="Assets\Scripts\loadScenes.cs" />
     <Compile Include="Assets\Scripts\MoneyUIUpdator.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\PathCreator.cs" />
     <Compile Include="Assets\Scripts\PathManager.cs" />
     <Compile Include="Assets\Scripts\ShootEnemies.cs" />
